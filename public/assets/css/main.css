@@ -2202,7 +2202,7 @@
 /* Nav */
 
 	#nav {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -2210,6 +2210,8 @@
 		padding: 1.5em 0 1.5em 0;
 		z-index: 1;
 		overflow: hidden;
+    background-color: #1d9d74;
+    color: #fff;
 	}
 
 		#nav > ul {
