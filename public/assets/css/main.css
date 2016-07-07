@@ -1721,7 +1721,6 @@
       font-size: 1.5em;
       margin: 1em 0 2em 0;
       line-height: 1.5em;
-      text-align: inherit;
     }
 
   footer {
@@ -2096,7 +2095,7 @@
 
   #header {
     position: relative;
-    background-image: url("../../images/header.jpg");
+    background-image: url("../../images/header-1.png");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
