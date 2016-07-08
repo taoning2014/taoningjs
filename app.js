@@ -7,12 +7,18 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var staticPages = require('./routes/staticPages');
 var errorhandler = require('errorhandler')
+var config = require('./dev-config');
 var app = express();
 
 // view engine setup
 var hbs = exphbs.create({
   defaultLayout: 'static',
-  partialsDir: 'views/partials/'
+  partialsDir: 'views/partials/',
+  helpers: {
+    cdnPrefix: function() {
+      return config.cdnURL;
+    }
+  }
 });
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
