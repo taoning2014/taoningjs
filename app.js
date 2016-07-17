@@ -6,7 +6,8 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var staticPages = require('./routes/staticPages');
 var errorhandler = require('errorhandler')
-var config = require('./dev-config');
+//var config = require('./aws-config');
+var config = require('./local-config');
 var app = express();
 
 // view engine setup
