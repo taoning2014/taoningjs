@@ -6,8 +6,6 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var staticPages = require('./routes/staticPages');
 var errorhandler = require('errorhandler')
-//var config = require('./aws-config');
-var config = require('./local-config');
 var app = express();
 
 // view engine setup
@@ -16,7 +14,7 @@ var hbs = exphbs.create({
   partialsDir: 'views/partials/',
   helpers: {
     cdnPrefix: function() {
-      return config.cdnURL;
+      return process.env.TAONINGJS_CDNURL;
     }
   }
 });
